@@ -7,10 +7,10 @@
 # Build `venv` via `SSH`
 
 1. On terminal:
-`ssh user_name@rorqual.alliancecan.ca`
+```ssh user_name@rorqual.alliancecan.ca```
 
 2. Copy-paste
-`
+```
 cd /home/user_name/links/projects/def-user_name-ab/user_name
 module load StdEnv/2023 python/3.11
 
@@ -26,7 +26,7 @@ pip install ipython tqdm
 # required to use same kernel in Jupyter Hub
 pip install ipykernel 
 python -m ipykernel install --user --name myenv311 --display-name "py311"
-`
+```
 
 3. Optionally:
 
