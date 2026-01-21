@@ -1,4 +1,14 @@
-# Sockeye: usage notes for working in the ARC (Advanced Research Computing) environment 
+<details>
+<summary>AllianceCan: usage notes 
+</summary>
+</details>
+
+<details>
+<summary>Sockeye: usage notes for working in the ARC (Advanced Research Computing) environment 
+</summary>
+
+
+
 
 ## Contents
 
@@ -139,3 +149,8 @@ echo "$(squeue -h -j 3951233 -o %L)"
 
   
 </details>
+
+
+</details>
+
+
