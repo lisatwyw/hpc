@@ -13,7 +13,7 @@
 ```
 cd /home/user_name/links/projects/def-user_name-ab/user_name
 module reset
-module load StdEnv/2023 python/3.11
+module load StdEnv/2023 python/3.11 faiss/1.8.0
 
 python3.11 -m venv py311
 source py311/bin/activate
@@ -22,7 +22,7 @@ pip install --no-index --upgrade pip
 
 # packages you'll need
 pip install torch 
-pip install ipython tqdm transformers
+pip install ipython tqdm transformers faiss-cpu
 
 # required to use same kernel in Jupyter Hub
 pip install ipykernel 
