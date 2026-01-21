@@ -1,6 +1,39 @@
 <details>
 <summary>AllianceCan: usage notes 
 </summary>
+
+
+
+# Build `venv` via `SSH`
+
+1. On terminal:
+`ssh user_name@rorqual.alliancecan.ca`
+
+2. Copy-paste
+`
+cd /home/user_name/links/projects/def-user_name-ab/user_name
+module load StdEnv/2023 python/3.11
+
+python3.11 -m venv py311
+source py311/bin/activate
+
+pip install --no-index --upgrade pip
+
+# packages you'll need
+pip install torch transformers
+pip install ipython tqdm 
+
+# required to use same kernel in Jupyter Hub
+pip install ipykernel 
+python -m ipykernel install --user --name myenv311 --display-name "py311"
+`
+
+3. Optionally:
+
+Login to Jupyter Hub: https://jupyterhub.rorqual.alliancecan.ca/ 
+
+4. 
+
 </details>
 
 <details>
