@@ -13,19 +13,33 @@
 ```
 cd /home/user_name/links/projects/def-user_name-ab/user_name
 module reset
-module load StdEnv/2023 python/3.11 faiss/1.8.0
+module load StdEnv/2023 python/3.11
 
 python3.11 -m venv py311
 source py311/bin/activate
 
 pip install --no-index --upgrade pip
 
+# Clear the pip cache first
+pip cache purge
+
+# Install using a custom temp directory
+mkdir -p /scratch/$USER/tmp
+export TMPDIR=/scratch/$USER/tmp
+
 # packages you'll need
 pip install torch 
-pip install ipython tqdm transformers optuna triton sklearn xgboost
+pip install ipython tqdm transformers optuna triton sklearn 
+
+pip install --no-cache-dir xgboost
+pip install --no-cache-dir scikit-survival
+
+
 
 # required to use same kernel in Jupyter Hub
-pip install ipykernel 
+pip install ipykernel
+
+# create a kernel for use in Jupyter Hub
 python -m ipykernel install --user --name myenv311 --display-name "py311"
 ```
 
@@ -33,7 +47,7 @@ python -m ipykernel install --user --name myenv311 --display-name "py311"
 
 Login to Jupyter Hub: https://jupyterhub.rorqual.alliancecan.ca/ 
 
-4. 
+ 
 
 </details>
 
