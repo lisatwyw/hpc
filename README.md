@@ -22,7 +22,7 @@ pip install --no-index --upgrade pip
 
 # packages you'll need
 pip install torch 
-pip install ipython tqdm transformers faiss-cpu
+pip install ipython tqdm transformers optuna triton sklearn xgboost
 
 # required to use same kernel in Jupyter Hub
 pip install ipykernel 
